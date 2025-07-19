@@ -1,4 +1,4 @@
-# Mis trabajos Java
+
 Este repositorio contiene diferentes trabajos individuales de la materia Arquitectura de software.
 
 ## Contenido

@@ -1,0 +1,71 @@
+/* === Estilo general de la página === */
+body {
+    background: linear-gradient(to bottom, #1d0764, #1e3a8a); /* degradado azul oscuro */
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+}
+
+/* Títulos */
+h1 {
+    font-weight: bold;
+    color: #f1f1f1;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #dcdcdc;
+}
+
+/* === Botones personalizados === */
+.btn-users {
+    background-color: #ce9128; /* Azul oscuro */
+    color: white;
+    border: none;
+}
+.btn-users:hover {
+    background-color: #2244a1; /* Azul más claro */
+}
+
+.btn-matches {
+    background-color: #da6c34; /* Naranja */
+    color: white;
+    border: none;
+}
+.btn-matches:hover {
+    background-color: #2d20b7; /* Naranja más claro */
+}
+
+.btn-specialty {
+    background-color: #f94c21; /* Azul vivo (antes era morado) */
+    color: white;
+    border: none;
+}
+.btn-specialty:hover {
+    background-color: #1d0764; /* Azul más claro */
+}
+
+/* Botones grandes y con sombra */
+.btn-lg {
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-lg:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen superior */
+.logo {
+    max-width: 250px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}

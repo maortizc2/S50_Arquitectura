@@ -1,0 +1,70 @@
+# Project: Basketball Referee Management
+------------------------------------------------
+
+REQUIREMENTS:
+1. Make sure you have installed:
+   - Java JDK 17 (or higher).
+   - Maven 3.8+.
+   - An IDE with Spring Boot support (e.g., IntelliJ IDEA, Eclipse, VS Code).
+
+------------------------------------------------
+
+RUNNING THE PROJECT:
+1. Compile and run with Maven:
+   mvn spring-boot:run
+   (or run the main class with @SpringBootApplication directly from your IDE)
+
+2. By default, the application runs at:
+   http://localhost:8080/
+
+------------------------------------------------
+
+MAIN ROUTES:
+- Home page (index):  
+  http://localhost:8080/
+
+- Users:  
+  http://localhost:8080/users  
+  (list, create, view details, delete)
+
+- Specialties:  
+  http://localhost:8080/specialties  
+  (list, create, view details, delete)
+
+- Matches:  
+  http://localhost:8080/matches  
+  (list, create, view details, delete)
+
+------------------------------------------------
+
+STYLES:
+- Custom styles are located in:  
+  src/main/resources/static/css/style.css
+
+------------------------------------------------
+
+COMMON ISSUES:
+1. **Port 8080 already in use**  
+   - Stop other applications using port 8080 (e.g., another Spring Boot app).  
+   - Or run with a different port:  
+     mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=8081"
+
+2. **Dependencies not downloading**  
+   - Run:  
+     mvn clean install  
+   - Make sure you have a stable internet connection to download.
+
+3. **Changes not reflected in the browser**  
+   - Clear your browser cache or force refresh with Ctrl + Shift + R.  
+   - Ensure you saved changes inside `src/main/resources/templates` or `static`.
+
+4. **Template errors (Thymeleaf)**  
+   - Verify that the `.html` file name matches the one returned by the controller.  
+   - Check for typos in `th:field`, `th:object`, or `th:each`.
+
+------------------------------------------------
+
+NOTES:
+- This project uses an in-memory H2 database by default, the data will be lost upon rebooting .  
+- Data will reset each time the application restarts.  
+- Styles and button colors are customizable in `style.css`.

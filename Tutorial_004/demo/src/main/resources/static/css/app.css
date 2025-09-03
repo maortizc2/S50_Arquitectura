@@ -1,0 +1,104 @@
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+}
+header h1 {
+    font-size: 1.7rem;
+    margin: 0;
+}
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+header nav a:hover {
+    color: #f39c12;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+footer a {
+    color: #f39c12;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Main Index */
+main {
+    min-height: 70vh;
+}
+.display-4 {
+    color: #2c3e50;
+    font-weight: 700;
+}
+.lead {
+    color: #555;
+}
+.btn-primary {
+    background-color: #2c3e50;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #f39c12;
+    color: #fff;
+}
+
+/* Custom Cards */
+.custom-card {
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+.custom-card:hover {
+    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.15);
+    border-color: #f39c12;
+}
+.card-title {
+    color: #2c3e50;
+    font-weight: 600;
+}
+.card-text {
+    color: #555;
+}
+
+/* About Page */
+.about-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.about-heading {
+    color: #2e5845;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.about-text {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.team-image {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}

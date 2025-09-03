@@ -2,6 +2,11 @@ package com.eafit.nutrition.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDate;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.HashMap;
+import java.util.Map;
 
 @Entity
 @Table(name = "medicion")
@@ -79,5 +84,90 @@ public Double getAltura() {
 }
 public void setAltura(Double altura) {
     this.altura = altura;
+}
+public Double getCircunferenciaCintura() {
+        return circunferenciaCintura;
+    }
+
+public void setCircunferenciaCintura(Double circunferenciaCintura) {
+    this.circunferenciaCintura = circunferenciaCintura;
+}
+
+public Double getCircunferenciaCadera() {
+    return circunferenciaCadera;
+}
+
+public void setCircunferenciaCadera(Double circunferenciaCadera) {
+    this.circunferenciaCadera = circunferenciaCadera;
+}
+
+public Double getPorcentajeGrasaCorporal() {
+    return porcentajeGrasaCorporal;
+}
+
+public void setPorcentajeGrasaCorporal(Double porcentajeGrasaCorporal) {
+    this.porcentajeGrasaCorporal = porcentajeGrasaCorporal;
+}
+public Paciente getPaciente() {
+    return paciente;
+}
+
+public void setPaciente(Paciente paciente) {
+    this.paciente = paciente;
+}
+
+public Nutricionista getNutricionista() {
+    return nutricionista;
+}
+
+public void setNutricionista(Nutricionista nutricionista) {
+    this.nutricionista = nutricionista;
+}
+
+@JsonProperty("pacienteInfo")
+
+public Map<String, Object> getPacienteInfo() {
+
+    if (paciente == null) {
+
+        return null;
+
+    }
+
+    Map<String, Object> info = new HashMap<>();
+
+    info.put("id", paciente.getId());
+
+    info.put("nombre", paciente.getNombre());
+
+    info.put("apellido", paciente.getApellido());
+
+    info.put("email", paciente.getEmail());
+
+    return info;
+
+}
+@JsonProperty("nutricionistaInfo")
+
+public Map<String, Object> getNutricionistaInfo() {
+
+    if (nutricionista == null) {
+
+        return null;
+
+    }
+
+    Map<String, Object> info = new HashMap<>();
+
+    info.put("id", nutricionista.getId());
+
+    info.put("nombre", nutricionista.getNombre());
+
+    info.put("apellido", nutricionista.getApellido());
+
+    info.put("numeroLicencia", nutricionista.getNumeroLicencia());
+
+    return info;
+
 }
 }

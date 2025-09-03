@@ -21,50 +21,51 @@ public class ProductController {
         Map.of("id", "3", "name", "Chromecast", "description", "Best Chromecast"),
         Map.of("id", "4", "name", "Glasses", "description", "Best Glasses")
     );
+    
+    @GetMapping("/products/{id}")
+    public String show(@PathVariable String id, Model model) {
+        int productId = Integer.parseInt(id) - 1;
+        if (productId < 0 || productId >= products.size()) {
+            return "redirect:/";
+        }
+        Map<String, String> product = products.get(productId);
+        model.addAttribute("title", product.get("name") + " - Online Store");
+        model.addAttribute("subtitle", product.get("name") + " - Product Information");
+        model.addAttribute("product", product);
+        return "product/show";
+    }
+
     @GetMapping("/products")
     public String index(Model model) {
         model.addAttribute("title", "Products - Online Store");
-        model.addAttribute("subtitle", "Product List");
+        model.addAttribute("subtitle", "List of products");
         model.addAttribute("products", products);
-        return "prod/product";
-    }
-
-    @GetMapping("/products/{id}")
-    public String show(@PathVariable String id, Model model) {
-        try {
-            int productId = Integer.parseInt(id) - 1;
-            if (productId < 0 || productId >= products.size()) {
-                return "redirect:/";
-            }
-            Map<String, String> product = products.get(productId);
-            model.addAttribute("title", product.get("name") + " - Online Store");
-            model.addAttribute("subtitle", product.get("name") + " - Product Information");
-            model.addAttribute("product", product);
-            return "prod/show";
-        } catch (NumberFormatException e) {
-            return "redirect:/";
-        }
+        return "product/index";
     }
 
     @GetMapping("/products/create")
     public String create(Model model) {
         model.addAttribute("title", "Create Product");
         model.addAttribute("productForm", new ProductForm());
-    return "prod/create";
+        return "product/create";
     }
-    
+
     @PostMapping("/products/save")
-    public String save(@Valid @ModelAttribute("productForm") ProductForm productForm, BindingResult result, Model model) {
+    public String save(@Valid @ModelAttribute("productForm") ProductForm productForm, BindingResult result,
+            Model model) {
         if (result.hasErrors()) {
             model.addAttribute("title", "Create Product");
-        return "prod/create";
-    }
-// Simulación de guardar el producto en la lista (sin persistencia en DB)
+            return "product/create";
+        }
+
+
+     // Simulación de guardar el producto en la lista (sin persistencia en DB)
         Map<String, String> newProduct = new HashMap<>();
         newProduct.put("id", String.valueOf(products.size() + 1));
         newProduct.put("name", productForm.getName());
         newProduct.put("description", "Price: $" + productForm.getPrice());
+        newProduct.put("price", productForm.getPrice().toString());
         products.add(newProduct);
-    return "redirect:/products";
+        return "product/created";
     }
 }

@@ -7,8 +7,6 @@ Este repositorio contiene diferentes trabajos individuales de la materia Arquite
 
 - **Tutorial_002**: en los grupos del proyecto cada integrante subira 4 diagramas C4.
 
-- **Tutorial_003**: Se entrego 3 diapositivas con los diagramas C4 del proyecto del semestre.
-
 - **Tutorial_004**: pagina con contenido unico sobre cada ti mismo, dos rutas maria-alejandra y maria-alejandra-2.
 
 - **Tutorial_005**: implementacion de Springboot vista-controlador con un ejercicio de un e-commerce. 

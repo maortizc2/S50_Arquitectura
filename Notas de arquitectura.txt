@@ -89,6 +89,14 @@ se aplicara la configuracion automatica del starter que hemos utilizado, frecuen
 @ComponentScan 
 localiza elementos etiquetados con otras anotaciones cuando sean necesarios.
 
+Para modelar relaciones entre entidades, JPA proporciona varias anotaciones:
+· @OneToMany: Relación uno-a-muchos
+· @ManyToOne: Relación muchos-a-uno
+· @OneToOne: Relación uno-a-uno
+· @ManyToMany: Relación muchos-a-muchos
+· @JoinColumn: Especifica la columna de clave foránea
+· @JoinTable: Define una tabla de unión (para relaciones @ManyToMany)
+
 Un objeto gestionado por Spring
  @component:anotacion generica para cualquier bean.(ben en esencia es un objeto de java)
  @service:para la logica de negocios, crea una instancia en mi contenedor.
@@ -147,6 +155,12 @@ URL relativas: son las mas utilizadas, te dirigen a otro enlace del mismo proyec
 
 Th:each
 iterar sobre colecciones de direntes tipos de objetos
+===========================================================================
+¿Qué es la Inyección de Dependencias?
+
+La inyección de dependencias (DI) es un patrón de diseño en el que una clase recibe sus dependencias de fuentes externas en lugar de crearlas internamente. Esto promueve el bajo acoplamiento y facilita las pruebas.
+
+
 
 
 

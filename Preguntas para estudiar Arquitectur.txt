@@ -1,0 +1,134 @@
+Preguntas para estudiar Arquitectura
+1. Apache Tomcat
+
+Pregunta: ¿Qué es Apache Tomcat?
+Respuesta: Es un servidor web y contenedor de servlets de código abierto que permite ejecutar servlets y JSP para aplicaciones web dinámicas.
+
+Pregunta: ¿Qué diferencia hay entre Servidor Web y Contenedor de Servlets en Tomcat?
+Respuesta:
+
+Servidor Web: procesa peticiones HTTP y responde al cliente.
+
+Contenedor de Servlets: ejecuta componentes Java (Servlets y JSP).
+
+2. Java en la web
+
+Pregunta: ¿Qué es un Servlet?
+Respuesta: Una clase Java que recibe solicitudes HTTP y devuelve respuestas dinámicas.
+
+Pregunta: ¿Qué es una JSP?
+Respuesta: Una página HTML que puede incluir código Java para generar contenido dinámico.
+
+Pregunta: ¿Qué función cumplen los contenedores de Servlets?
+Respuesta: Gestionan la ejecución de Servlets y JSP, además de enrutar las peticiones web.
+
+3. Gestores de dependencias
+
+Pregunta: ¿Qué son las dependencias en un proyecto de software?
+Respuesta: Bibliotecas externas o componentes que una aplicación necesita para funcionar.
+
+Pregunta: ¿Cuál es el rol de un gestor de dependencias?
+Respuesta: Coordinar la integración de dependencias, manejar versiones y obtenerlas desde repositorios.
+
+Pregunta: ¿Qué archivo usa Maven para manejar dependencias?
+Respuesta: pom.xml
+
+4. Arquitecturas de software
+
+Pregunta: ¿Por qué es importante la arquitectura de software?
+Respuesta: Porque gestiona la complejidad, facilita la comunicación, asegura calidad, y permite evolución y mantenimiento a largo plazo.
+
+Pregunta: ¿Qué es la arquitectura Cliente-Servidor?
+Respuesta: Modelo en el que un cliente hace peticiones y el servidor responde, usando Internet como canal de comunicación.
+
+Pregunta: ¿Cuáles son los métodos HTTP más comunes?
+Respuesta: GET, POST, PUT, DELETE.
+
+5. Frameworks
+
+Pregunta: Diferencia entre frameworks verticales y horizontales.
+Respuesta:
+
+Verticales: centrados en un dominio específico.
+
+Horizontales: sirven para múltiples aplicaciones, más genéricos.
+
+Pregunta: Diferencia entre frameworks opinados y no opinados.
+Respuesta:
+
+Opinados: imponen una estructura rígida.
+
+No opinados: ofrecen más libertad y flexibilidad.
+
+6. Spring y Spring Boot
+
+Pregunta: ¿Qué es Spring?
+Respuesta: Framework de código abierto para desarrollar aplicaciones Java modulares y escalables.
+
+Pregunta: ¿Qué es Spring Boot?
+Respuesta: Una extensión de Spring que simplifica la creación de aplicaciones listas para producción con mínima configuración.
+
+Pregunta: ¿Qué ventajas ofrece Spring Boot?
+Respuesta: Reduce el tiempo de desarrollo, aumenta productividad y ofrece configuración automática.
+
+7. Annotations en Spring
+
+Pregunta: ¿Qué hace @Entity?
+Respuesta: Indica que una clase será mapeada como una tabla en la base de datos.
+
+Pregunta: ¿Qué hace @GeneratedValue?
+Respuesta: Genera automáticamente el valor de la clave primaria.
+
+Pregunta: Diferencia entre @Service, @Repository y @Controller.
+Respuesta:
+
+@Service: lógica de negocio.
+
+@Repository: acceso a datos.
+
+@Controller: recibe peticiones del usuario y las dirige a la lógica correspondiente.
+
+8. Entornos
+
+Pregunta: ¿Qué diferencia hay entre application-dev.properties y application-staging.properties?
+Respuesta:
+
+Dev: almacena datos en memoria (se pierden al reiniciar).
+
+Staging: persiste datos en archivos (se mantienen tras reiniciar).
+
+Pregunta: ¿Qué anotación se usa para inyectar valores individuales desde propiedades?
+Respuesta: @Value
+
+Pregunta: ¿Qué anotación se usa para agrupar propiedades complejas?
+Respuesta: @ConfigurationProperties
+
+9. Thymeleaf
+
+Pregunta: ¿Qué es Thymeleaf?
+Respuesta: Un motor de plantillas que genera HTML dinámico en aplicaciones Spring.
+
+Pregunta: ¿Qué hace th:text?
+Respuesta: Muestra texto en la vista.
+
+Pregunta: ¿Qué hace th:each?
+Respuesta: Itera sobre colecciones de objetos en la vista.
+
+10. Inyección de Dependencias (DI)
+
+Pregunta: ¿Qué es la Inyección de Dependencias?
+Respuesta: Un patrón donde las dependencias de una clase son proporcionadas desde afuera, en lugar de crearse dentro de la clase.
+
+Pregunta: ¿Por qué es útil la Inyección de Dependencias?
+Respuesta: Porque promueve bajo acoplamiento y facilita las pruebas.
+
+11. DTO y Repositorios
+
+Pregunta: ¿Cuál es la única clase que debe interactuar con la base de datos directamente?
+Respuesta: El Repositorio.
+
+Pregunta: ¿Qué hace @Query en un repositorio?
+Respuesta: Define consultas personalizadas en HQL o SQL.
+
+Pregunta: ¿Puede un servicio comunicarse con más de un repositorio?
+Respuesta: Sí, puede inyectar múltiples repositorios con @Autowired.

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "nombre": "Juan Pérez",
+    "especialidad": "Fútbol",
+    "fotoUrl": ""
+  },
+  {
+    "id": 2,
+    "nombre": "Ana Gómez",
+    "especialidad": "Baloncesto",
+    "fotoUrl": ""
+  },
+  {
+    "id": 3,
+    "nombre": "Carlos Ruiz",
+    "especialidad": "Tenis",
+    "fotoUrl": ""
+  },
+  {
+    "id": 4,
+    "nombre": "María Fernández",
+    "especialidad": "Voleibol",
+    "fotoUrl": ""
+  },
+  {
+    "id": 5,
+    "nombre": "Luis Martínez",
+    "especialidad": "Fútbol",
+    "fotoUrl": ""
+  },
+  {
+    "id": 6,
+    "nombre": "Elena Torres",
+    "especialidad": "Baloncesto",
+    "fotoUrl": ""
+  },
+  {
+    "id": 7,
+    "nombre": "Pedro Sánchez",
+    "especialidad": "Fútbol",
+    "fotoUrl": ""
+  }
+]
